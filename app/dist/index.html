@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>loading 加载样式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Add your keywords and description here for SEO. -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <!-- Uncomment this if you need apple touch icon. -->
+    <!--
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+    -->
+    <!-- Don't delete this. It's needed for development workflow. -->
+    <link rel="stylesheet" href="stylesheets/bundle.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1">
+                <div style="height: 65px;background: #f2f2f2;line-height: 90px;font-size: 15px;font-weight: bold;padding-left: 40px">
+                    审核中
+                </div>
+                <div style="position: relative;margin-top: 160px;">
+                    <div class="macbook-wrapper" style="top:0px;">
+                        <div class="js-macbook macbook">
+                            <div class="macbook__lid"></div>
+                            <div class="macbook__display">
+                                <div class="macbook__display-inner">
+                                    <div class="diaplay-container">
+                                        <div class="ERROR">×</div>
+                                        <div class="loadingbar-container-1">
+                                            <div class="loadingbar-item loadingbar-item-1"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-2"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-3"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-4"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-5"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-6"> <span></span></div>
+                                            <div class="maskbottom">
+                                            </div>
+                                        </div>
+                                        <div class="loadingbar-container-2">
+                                            <div class="loadingbar-item loadingbar-item-1"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-2"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-3"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-4"> <span></span></div>
+                                            <div class="loadingbar-item loadingbar-item-5"> <span></span></div>
+                                            <div class="maskbottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--         <div class="app">
+                                    <div class="app__bar">
+                                        <div class="app__bar-dot app__bar-dot--close"></div>
+                                        <div class="app__bar-dot app__bar-dot--minimize"></div>
+                                        <div class="app__bar-dot app__bar-dot--maximize"></div>
+                                    </div>
+                                    <div class="app__content">
+                                        <div class="app__content-item">1</div>
+                                        <div class="app__content-item">2</div>
+                                        <div class="app__content-item">2</div>
+                                    </div>
+                                </div> -->
+                                </div>
+                            </div>
+                            <div class="macbook__body"></div>
+                            <div class="macbook__body-bottom">
+                                <div class="show-container">
+                                    <div class="progress" id="progressBar">
+                                        <div class="progress-number" aria-valuenow="0" style="left: 0;"></div>
+                                        <div class="rounded">
+                                            <div class="progress-bar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center" style="margin-left:-100px;margin-right:-100px;text-align: center;font-size: 17px;font-weight: 200;padding-top: 20px;">系统审核中，请耐心等待</div>
+                            <!-- progress bar -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-2">
+                <div style="height: 65px;background: #f2f2f2;line-height: 90px;font-size: 15px;font-weight: bold;padding-left: 40px">
+                    审核中
+                </div>
+         
+                    <div class="loader">
+                        <div class="bar">
+                            <div class="loaded"></div>
+                        </div>
+                          <div class="text-center" style="margin-left:-100px;margin-right:-100px;text-align: center;font-size: 17px;font-weight: 200;padding-top:60px;">系统审核中，请耐心等待</div>
+                    </div>
+                  
+                    <!-- progress bar -->
+             
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- Don't delete this. It's needed for development workflow. -->
+    <script src="javascripts/bundle.js"></script>
+    </div>
+    <button class="up-arrow">
+        <i class="icon-angle-double-up"></i>
+    </button>
+    <audio loop>
+        <source src="audios/background.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
