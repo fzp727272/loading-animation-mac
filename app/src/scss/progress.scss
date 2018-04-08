@@ -8,7 +8,7 @@ $lightcolor: #e5e5e5;
     transform: translate(-50%, -50%);
     width: 120px;
     bottom: 37px;
-    z-index: 999;
+    z-index: 9999999999;
 }
 
 .rounded {
@@ -21,6 +21,7 @@ $lightcolor: #e5e5e5;
 
 .progress-container {
     position: relative;
+    z-index: 99999;
 }
 
 .progress {
@@ -57,10 +58,11 @@ $lightcolor: #e5e5e5;
         &:after {
             content: attr(aria-valuenow);
             position: absolute;
+            z-index:99999;
             left: 0;
             top: -10px;
             transform: translate(-50%, -100%);
-            padding: 4px 10px;
+            padding: 4px 6px;
             color: #fff;
             font-size: 13px;
             font-weight: 300;

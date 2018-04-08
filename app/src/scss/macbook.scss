@@ -44,7 +44,7 @@ $macbook-glare-percentage: 0.07;
 
 .macbook__display {
   position: relative;
-  z-index: 2;
+
   width: 74%;
   margin: 0 auto;
   padding: 4.25% 3.25% 2.75%;
@@ -55,6 +55,7 @@ $macbook-glare-percentage: 0.07;
   border-top-right-radius: 3% 5%;
   border-bottom-left-radius: 1.25% 4%;
   border-bottom-right-radius: 1.25% 4%;
+  z-index: 0;
   
   // &:before,
   // &:after { @extend %pseudo-element-defaults; }
@@ -94,7 +95,7 @@ $macbook-glare-percentage: 0.07;
 
 .macbook__body {
   position: relative;
-  z-index: 3;
+  z-index:0;
   width: 100%;
   padding-bottom: 2%;
   background: $color-macbook-body;
@@ -120,6 +121,7 @@ $macbook-glare-percentage: 0.07;
   background: $color-macbook-body-bottom;
   border-bottom-left-radius: 5% 100%;
   border-bottom-right-radius: 5% 100%;
+  z-index: 2;
 }
 
 .app {  
@@ -182,7 +184,7 @@ $macbook-glare-percentage: 0.07;
 Animation states
 */
 .macbook {
-  transition: opacity 500ms ease-out, transform 2300ms $easing-codrops;
+  transition: opacity 200ms ease-out, transform 2300ms $easing-codrops;
   transition-delay: 100ms;
   perspective: 1400px;
   opacity: 0;
@@ -210,7 +212,7 @@ Animation states
   $display-transition-duration: 1750ms; 
   transition: all $display-transition-duration $easing-codrops;  
   transform-origin: 50% 100%;
-  transform: translate3d(0, 10px, 0) rotateX(-84deg);  
+  // transform: translate3d(0, 10px, 0) rotateX(-84deg);  
 
   &:before {
     transition: left $display-transition-duration $easing-codrops;

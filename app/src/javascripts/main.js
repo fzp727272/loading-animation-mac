@@ -35,7 +35,7 @@ setTimeout(() => {
 
         setTimeout(() => {
             open();
-        }, 250);
+        }, 0);
 
 
 
@@ -46,7 +46,7 @@ setTimeout(() => {
 
         function timerRun() {
             var timerper = timer + "%";
-            $('#progressBar .progress-bar').css("width", timer + "%").attr("aria-valuenow", timerper  );
+            $('#progressBar .progress-bar').css("width", timer + "%");
 
             $('#progressBar .progress-number').css("-webkit-transform", "translateX(" + percentageWidth * timer + "px)").attr("aria-valuenow", timerper);
             if (!error) {
