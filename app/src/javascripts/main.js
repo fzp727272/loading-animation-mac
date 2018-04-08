@@ -45,9 +45,10 @@ setTimeout(() => {
         var percentageWidth = $('#progressBar').outerWidth() / 100;
 
         function timerRun() {
-            $('#progressBar .progress-bar').css("width", timer + "%").attr("aria-valuenow", timer);
+            var timerper = timer + "%";
+            $('#progressBar .progress-bar').css("width", timer + "%").attr("aria-valuenow", timerper  );
 
-            $('#progressBar .progress-number').css("-webkit-transform", "translateX(" + percentageWidth * timer + "px)").attr("aria-valuenow", timer);
+            $('#progressBar .progress-number').css("-webkit-transform", "translateX(" + percentageWidth * timer + "px)").attr("aria-valuenow", timerper);
             if (!error) {
 
                 if (timer >= 100) {
