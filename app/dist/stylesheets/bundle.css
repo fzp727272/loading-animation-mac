@@ -4854,7 +4854,7 @@ body {
 }
 
 .macbook {
-  width: 100px;
+  width: 120px;
   margin: 0 auto;
 }
 
@@ -4980,7 +4980,7 @@ body {
 Animation states
 */
 .macbook {
-  transition: opacity 200ms ease-out, transform 2300ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: opacity 500ms ease-out, transform 2300ms cubic-bezier(0.2, 1, 0.3, 1);
   transition-delay: 100ms;
   perspective: 1400px;
   opacity: 0;
@@ -5071,7 +5071,7 @@ Animation states
 
 .loadingbar-item {
   width: 100%;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .loadingbar-item span {

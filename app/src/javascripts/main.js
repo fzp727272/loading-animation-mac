@@ -6,7 +6,7 @@ var animationControl = require('./animation-control.js');
 var error = false;
 setTimeout(() => {
     error = true
-}, 6000);
+}, 10000);
 
 
 (function() {
@@ -14,7 +14,7 @@ setTimeout(() => {
 
 
     //macbook开合动画
-    $(document).ready(function() {
+  
         const $macbook = $('.js-macbook');
 
         function open() {
@@ -36,7 +36,8 @@ setTimeout(() => {
         setTimeout(() => {
             open();
         }, 250);
-    })
+
+
 
     //macbook进度条执行动画
     $(document).ready(function() {
@@ -58,7 +59,7 @@ setTimeout(() => {
                 timer++;
                 setTimeout(function() {
                     timerRun()
-                }, 200);
+                }, 100);
             } else {
                 //loading失败样式设定
                 $(".maskbottom").css({
@@ -71,8 +72,13 @@ setTimeout(() => {
                 $(".loadingbar-container-1").fadeOut(200);
                 $(".loadingbar-container-2").fadeOut(200);
                 $(".progress-number").fadeOut(200);
-                $(".text-center").eq(0).fadeOut(200).html("审核失败,请重新刷新").fadeIn(200).addClass("wordingChange");
-                $(".ERROR").fadeIn(200).addClass("Error-animation")
+                // $(".text-center").eq(0).fadeOut(200).html("审核失败,请重新刷新").fadeIn(200).addClass("wordingChange");
+                // $(".ERROR").fadeIn(200).addClass("Error-animation")
+                close();
+                function locate (){
+                    window.location.href = "./Error.html";
+                }
+               setTimeout(locate,1000) 
             }
         }
 
@@ -85,57 +91,58 @@ setTimeout(() => {
 
 
     //星系执行动画
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
-        for (var i = 0; i < 20; i++) {
-            var radius = (rnd(1600, 3400) / 15);
-            var modifier = radius / 160;
-            $(".loader").append("<div class=\"spinner\" style=\" height: " + radius + "px; animation-delay: -" + (rnd(40, 80) / 10) + "s\"></div>");
-        }
-
-
-        var loaded = 0;
-
-        function loader() {
-            if (rnd(0, 1) == 1) {
-                loaded++;
-                var $ele = $(".spinner:nth-child(" + Math.floor(loaded / 5) + ")");
-                $ele.css({
-                    height: "0px",
+    //     for (var i = 0; i < 20; i++) {
+    //         var radius = (rnd(1600, 3400) / 15);
+    //         var modifier = radius / 160;
+    //         $(".loader").append("<div class=\"spinner\" style=\" height: " + radius + "px; animation-delay: -" + (rnd(40, 80) / 10) + "s\"></div>");
+    //     }
 
 
-                })
-                // $ele.animate({
-                //     height: "0px"
-                // }, 1000)
-                setTimeout(function() {
-                    $ele.css({
-                        animation: "none"
-                    })
-                }, 1000)
+    //     var loaded = 0;
 
-                $(".loaded").css("width", (loaded + "%"));
-            }
-            if (loader >= 100) {
-                clearInterval(runloader);
+    //     function loader() {
+    //         if (rnd(0, 1) == 1) {
+    //             loaded++;
+    //             var $ele = $(".spinner:nth-child(" + Math.floor(loaded / 5) + ")");
+    //             $ele.css({
+    //                 height: "0px",
 
 
-                $(".spinner:nth-child(" + Math.floor(loaded / 5) + ")").css({
-                    "height": "0px",
+    //             })
+    //             // $ele.animate({
+    //             //     height: "0px"
+    //             // }, 1000)
+    //             setTimeout(function() {
+    //                 $ele.css({
+    //                     animation: "none"
+    //                 })
+    //             }, 1000)
 
-                });
-                $(".loaded").css("width", (loaded + "%"));
+    //             $(".loaded").css("width", (loaded + "%"));
+    //         }
+    //         if (loader >= 100) {
 
-            }
-        }
-        var runloader = setInterval(loader, 50);
+    //             clearInterval(runloader);
 
-        function rnd(m, n) {
-            m = parseInt(m);
-            n = parseInt(n);
-            return Math.floor(Math.random() * (n - m + 1)) + m;
-        }
-    })
+
+    //             $(".spinner:nth-child(" + Math.floor(loaded / 5) + ")").css({
+    //                 "height": "0px",
+
+    //             });
+    //             $(".loaded").css("width", (loaded + "%"));
+
+    //         }
+    //     }
+    //     var runloader = setInterval(loader, 50);
+
+    //     function rnd(m, n) {
+    //         m = parseInt(m);
+    //         n = parseInt(n);
+    //         return Math.floor(Math.random() * (n - m + 1)) + m;
+    //     }
+    // })
 
 
     //添加swipe滑动
@@ -170,7 +177,7 @@ setTimeout(() => {
                 modifier: 1,
                 slideShadows: false // do disable shadows for better performance
             },
-            flip: {
+             flip: {
                 limitRotation: true,
                 slideShadows: false // do disable shadows for better performance
             },

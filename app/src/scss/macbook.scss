@@ -22,7 +22,7 @@ $macbook-glare-percentage: 0.07;
 }
 
 .macbook {
-  width: 100px;
+  width: 120px;
   margin: 0 auto;
 
   &,
@@ -182,7 +182,7 @@ $macbook-glare-percentage: 0.07;
 Animation states
 */
 .macbook {
-  transition: opacity 200ms ease-out, transform 2300ms $easing-codrops;
+  transition: opacity 500ms ease-out, transform 2300ms $easing-codrops;
   transition-delay: 100ms;
   perspective: 1400px;
   opacity: 0;

@@ -103,7 +103,7 @@ gulp.task('publish-js', function () {
 // inject app/dist/stylesheets/bundle.css and app/dist/javascripts/bundle.js into app/src/index.html
 // and save as app/dist/index.html
 gulp.task('inject', function () {
-    var target = gulp.src('app/src/index.html');
+    var target = gulp.src(['app/src/index.html','app/src/Error.html']);
     var assets = gulp.src([
         'app/dist/stylesheets/bundle.css',
         'app/dist/javascripts/bundle.js'
@@ -128,6 +128,7 @@ gulp.task('watch', function () {
     });
 
     gulp.watch('app/src/index.html', ['inject']);
+    gulp.watch('app/src/Error.html', ['inject']);
     gulp.watch('app/src/scss/**/*.scss', ['publish-css']);
     gulp.watch('app/src/javascripts/**/*', ['publish-js']);
     gulp.watch('app/src/fonts/**/*', ['publish-fonts']);
